@@ -33,7 +33,7 @@ This project is a backend service for a daily-expenses sharing application, whic
    cd daily-expenses-sharing-backend
 Install Dependencies: Make sure you have Node.js installed, then run:
 
-```npm install
+```npm install ```
 
 Usage
 Postman or Curl can be used to test the API.
@@ -42,7 +42,8 @@ Adding a User:
 Make a POST request to /users to create a new user:
 
 json
-Copy code
+```
+
 {
   "name": "John Doe",
   "email": "john@example.com",
@@ -52,7 +53,7 @@ Adding an Expense:
 Make a POST request to /expenses with the details of the expense. Here's an example:
 
 json
-Copy code
+
 {
   "description": "Dinner",
   "amount": 3000,
@@ -76,6 +77,7 @@ Copy code
   ],
   "split_type": "equal"
 }
+```
 API Endpoints
 User Endpoints
 Create a User: POST /users
@@ -83,12 +85,13 @@ Create a User: POST /users
 Creates a new user with name, email, and mobile.
 Request Body:
 json
-Copy code
+```
 {
   "name": "John Doe",
   "email": "john@example.com",
   "mobile": "1234567890"
 }
+```
 Get User Details: GET /users/:id
 
 Retrieve user details by their ID.
@@ -98,7 +101,7 @@ Add Expense: POST /expenses
 Adds a new expense, split equally, by exact amounts, or by percentage.
 Request Body:
 json
-Copy code
+```
 {
   "description": "Dinner",
   "amount": 3000,
@@ -117,6 +120,7 @@ Copy code
   ],
   "split_type": "equal"
 }
+```
 Retrieve Individual User Expenses: GET /expenses/user/:user_id
 
 Retrieves all expenses for a specific user by their ID.
@@ -134,8 +138,7 @@ Mongoose: ODM (Object Data Modeling) library for MongoDB and Node.js.
 JWT (JSON Web Tokens): For authentication (optional, if adding auth).
 Postman: Tool for testing API endpoints.
 File Structure
-bash
-Copy code
+```
 ├── models/                 # Mongoose schema models
 │   ├── userModel.js        # User schema
 │   ├── expenseModel.js     # Expense schema
@@ -148,3 +151,4 @@ Copy code
 ├── .env                    # Environment variables
 ├── app.js                  # Main application file
 ├── package.json            # Project dependencies and scripts
+```
